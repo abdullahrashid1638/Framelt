@@ -15,16 +15,17 @@ const Header = ({ className = '' }) => {
             className={`grid grid-cols-[2fr,12fr,2fr] items-center w-full px-10 ${className}`}
         >
             {/* Left: Logo */}
-            <div id="Logo" className="flex justify-start">
+            <div id="Logo" className="flex justify-start mr-6">
                 <Logo />
             </div>
 
             {/* Center: Search Bar */}
-            <div id="Search-bar" className="flex justify-center">
-                <div className="w-full max-w-[1200px]">
-                    <SearchField />
+            <div id="Search-bar" className="flex justify-center px-4">
+                <div className="w-full max-w-[1200px] sm:min-w-[200px] sm:max-w-[800px] lg:max-w-[1000px]">
+                    <SearchField className="w-full sm:min-w-[200px] sm:max-w-[800px]" />
                 </div>
             </div>
+
 
             {/* Right: Authentication Buttons */}
             <div

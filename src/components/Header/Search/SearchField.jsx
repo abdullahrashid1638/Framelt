@@ -56,7 +56,12 @@ const SearchField = () => {
             InputProps={{
                 endAdornment: (
                     <InputAdornment position='end'>
-                        <IconButton onClick={handleSearchClick}>
+                        <IconButton 
+                            onClick={handleSearchClick}
+                            style={{
+                                marginRight: '5px'
+                            }}
+                        >
                             <img
                                 src={searchIcon}
                                 style={{ width: 22, height: 22 }}
