@@ -40,9 +40,13 @@ import Masonry from 'react-responsive-masonry'
 //     )
 // }
 
-const Photos = () => {
+const Photos = ({ photos }) => {
+    if (photos.length === 0) {
+        return <p>Loading images...</p>  // Show loading or placeholder
+    }
+
     return (
-        <Photo />
+        <Photo imgUrl={photos[4].urls.small} imgDescription={photos[4].alt_description} profileImage={photos[4].user.profile_image.small} username={photos[4].user.username} />
     )
 }
 

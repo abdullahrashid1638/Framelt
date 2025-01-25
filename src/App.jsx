@@ -31,7 +31,7 @@ const App = () => {
     }, [debouncedQuery])
 
     // First Image object from Unsplash
-    // console.log('Photo in state: ', photos[0])
+    // console.log('Photos in state: ', photos)
 
     return (
         <>
@@ -45,7 +45,7 @@ const App = () => {
                 <hr className='w-3/4 border-none h-[2px] bg-gray-400'/>
             </div>
 
-            <Photos />
+            <Photos photos={photos} />
         </>
     )
 }
