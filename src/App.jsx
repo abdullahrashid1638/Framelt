@@ -24,19 +24,14 @@ const App = () => {
 
     // Fetching images from Unsplash
     useEffect(() => {
-        async function fetchImages() {
-            try {
-                const images = await unsplash.getImages(debouncedQuery, 30)
-                setPhotos(images)
-            } catch (error) {
-                console.error('Error fetching images: ', error)
-            }
-        }
-
-        fetchImages()
+        unsplash.getImages(debouncedQuery, 20)
+            .then((photos) => {
+                setPhotos(photos)
+            })
     }, [debouncedQuery])
 
-    console.log(photos)
+    // First Image object from Unsplash
+    // console.log('Photo in state: ', photos[0])
 
     return (
         <>

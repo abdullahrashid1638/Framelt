@@ -10,7 +10,7 @@ import './header.css'
 // Background: #705c48
 
 const Header = ({ className = '' }) => {
-    return (<header className="bg-[#638F85] h-36 rounded-md pt-7 relative">
+    return (<header className="bg-[#1b4965] h-36 rounded-md pt-7 relative">
         <div
             className={`grid grid-cols-[2fr,12fr,2fr] items-center w-full px-10 ${className}`}
         >
